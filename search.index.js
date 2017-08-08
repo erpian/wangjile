@@ -2,7 +2,7 @@
 $(function () {
     $.ajax({
         type: "get",//请求方式  
-        url: "http://oudhv6jgn.bkt.clouddn.com/searchvaluesv2.json",//请求路径  
+        url: "http://oudhv6jgn.bkt.clouddn.com/searchvaluesv3.json",//请求路径  
         dataType: "json",//数据格式  
         success: function (resultData) {//成功处理函数        
             sourceDatas = resultData;
