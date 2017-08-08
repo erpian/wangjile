@@ -62,3 +62,5 @@ function EnterPress(e) { //传入 event
         $("#but_search").trigger("click");
     }
 }
+
+function tab_search(value){    $("#txt_searchValue").val(value);    $("#but_search").trigger("click");}
