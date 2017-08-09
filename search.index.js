@@ -16,7 +16,7 @@ var sourceDatas = null;
 $(function () {
     $.ajax({
         type: "get",//请求方式  
-        url: "http://oudhv6jgn.bkt.clouddn.com/searchvalues4.json",//请求路径  
+        url: "http://oudhv6jgn.bkt.clouddn.com/searchvalues5.json",//请求路径  
         dataType: "json",//数据格式  
         success: function (resultData) {//成功处理函数        
             sourceDatas = resultData;
@@ -40,7 +40,7 @@ $(function () {
             var searchCount = 0;
             for (var i = 0; i < sourceDatas.length; i++) {
                 var par = sourceDatas[i];
-                if (par.k.indexOf(value) >= 0) {
+                if (par.k.indexOf(value) >= 0 || value.indexOf(par.k)>=0) {
                     //$("#box_searchavalues").html("");
                     searchCount += 1;
                     var html = '<div class="card" style="width: 53rem;">';
