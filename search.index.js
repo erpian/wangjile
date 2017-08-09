@@ -16,7 +16,7 @@ var sourceDatas = null;
 $(function () {
     $.ajax({
         type: "get",//请求方式  
-        url: "http://oudhv6jgn.bkt.clouddn.com/searchvalues8.json",//请求路径  
+        url: "http://oudhv6jgn.bkt.clouddn.com/searchvalues1.json",//请求路径  
         dataType: "json",//数据格式  
         success: function (resultData) {//成功处理函数        
             sourceDatas = resultData;
