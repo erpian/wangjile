@@ -1,4 +1,18 @@
-﻿var sourceDatas = null;
+
+(function($){
+$.getUrlParam
+ = function(name)
+{
+var reg
+ = new RegExp("(^|&)"+
+ name +"=([^&]*)(&|$)");
+var r
+ = window.location.search.substr(1).match(reg);
+if (r!=null) return unescape(r[2]); return null;
+}
+})(jQuery);
+
+var sourceDatas = null;
 $(function () {
     $.ajax({
         type: "get",//请求方式  
@@ -53,6 +67,7 @@ $(function () {
 
 
 
+    
 
 });
 
@@ -64,3 +79,4 @@ function EnterPress(e) { //传入 event
 }
 
 function tab_search(value){    $("#txt_searchValue").val(value);    $("#but_search").trigger("click");}
+
